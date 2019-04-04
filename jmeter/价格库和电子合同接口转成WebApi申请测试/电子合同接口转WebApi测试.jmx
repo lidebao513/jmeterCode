@@ -4726,7 +4726,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="28 Insert_ContractLicense 添加激活码" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="28！！ Insert_ContractLicense 添加激活码" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4759,7 +4759,7 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Licenseid&quot;: &quot;01F64130-B2C0-4442-8A2C-28B1D8669802&quot;,&#xd;
+  &quot;Licenseid&quot;: &quot;05F64130-B2C0-4442-8A2C-28B1D8669802&quot;,&#xd;
   &quot;Schoolid&quot;: 5,&#xd;
   &quot;Status&quot;: 1,&#xd;
   &quot;Expire&quot;: 0,&#xd;
@@ -4833,7 +4833,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="29 Update_ContractLicense更新激活码" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="29 ！！Update_ContractLicense更新激活码" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6810,7 +6810,7 @@
                   <stringProp name="Argument.value">{&#xd;
   &quot;Studentid&quot;: 0,&#xd;
   &quot;Htid&quot;: 0,&#xd;
-  &quot;Htype&quot;: &quot;string&quot;,&#xd;
+  &quot;Htype&quot;: &quot;1&quot;,&#xd;
   &quot;Type&quot;: 0,&#xd;
   &quot;Status&quot;: 0&#xd;
 }</stringProp>
@@ -7828,7 +7828,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6TJPerson 根据推荐码获取推荐人" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6TJPerson 根据推荐码获取推荐人" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -8352,7 +8352,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11 ！！！！HtbyStudentidDndFeeDate根据日期和合同类别获取是否存在合同（  缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11 ！！HtbyStudentidDndFeeDate根据日期和合同类别获取是否存在合同（无返回数据已提交bug）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
