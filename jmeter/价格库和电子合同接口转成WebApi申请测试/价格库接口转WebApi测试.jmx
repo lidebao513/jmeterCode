@@ -4,14 +4,50 @@
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
-      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath">D:\AppendFile.jar</stringProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/Price/AuthLogin" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="api/Price/AuthLogin" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -64,53 +100,32 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree/>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
-          <boolProp name="ResultCollector.error_logging">false</boolProp>
-          <objProp>
-            <name>saveConfig</name>
-            <value class="SampleSaveConfiguration">
-              <time>true</time>
-              <latency>true</latency>
-              <timestamp>true</timestamp>
-              <success>true</success>
-              <label>true</label>
-              <code>true</code>
-              <message>true</message>
-              <threadName>true</threadName>
-              <dataType>true</dataType>
-              <encoding>false</encoding>
-              <assertions>true</assertions>
-              <subresults>true</subresults>
-              <responseData>false</responseData>
-              <samplerData>false</samplerData>
-              <xml>false</xml>
-              <fieldNames>true</fieldNames>
-              <responseHeaders>false</responseHeaders>
-              <requestHeaders>false</requestHeaders>
-              <responseDataOnError>false</responseDataOnError>
-              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-              <assertionsResultsToSave>0</assertionsResultsToSave>
-              <bytes>true</bytes>
-              <sentBytes>true</sentBytes>
-              <threadCounts>true</threadCounts>
-              <idleTime>true</idleTime>
-              <connectTime>true</connectTime>
-            </value>
-          </objProp>
-          <stringProp name="filename"></stringProp>
-        </ResultCollector>
-        <hashTree/>
-        <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="true">
-          <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-          <stringProp name="RegexExtractor.refname">Authorization</stringProp>
-          <stringProp name="RegexExtractor.regex">&quot;Return_data&quot;:&quot;(.+?)&quot;,</stringProp>
-          <stringProp name="RegexExtractor.template">$1$</stringProp>
-          <stringProp name="RegexExtractor.default"></stringProp>
-          <stringProp name="RegexExtractor.match_number">0</stringProp>
-          <boolProp name="RegexExtractor.default_empty_value">true</boolProp>
-        </RegexExtractor>
-        <hashTree/>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="正则表达式提取器" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">Authorization</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;Return_data&quot;:&quot;(.+?)&quot;,</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number">0</stringProp>
+            <boolProp name="RegexExtractor.default_empty_value">true</boolProp>
+          </RegexExtractor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters">${Authorization}</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">//String Authorization=bsh.args[0];
+//print(&quot;=================分隔符===============&quot;);
+//print(Authorization);
+//${_setProperty(requestAuthorization,${Authorization),)};
+
+String Authorization = bsh.args[0];
+print (Authorization);
+${__setProperty(newAuthorization,${Authorization},)}</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
         <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="false">
           <boolProp name="resetInterpreter">false</boolProp>
           <stringProp name="parameters"></stringProp>
@@ -243,7 +258,7 @@ writer.close();
 </stringProp>
         </BeanShellPostProcessor>
         <hashTree/>
-        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="false">
           <stringProp name="BeanShellSampler.query">import AppendFile.*;
 String filepath=&quot;D:\\GitHub\\jmeterCode\\jmeter\\价格库和电子合同接口转成WebApi申请测试\\Authorization.txt&quot;;
 String content=vars.get(&quot;Authorization&quot;);
@@ -255,11 +270,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
         </BeanShellSampler>
         <hashTree/>
       </hashTree>
-      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="false">
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
         <collectionProp name="HeaderManager.headers">
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">Authorization</stringProp>
-            <stringProp name="Header.value">Bearer ${_P(requestAuthorization,)}</stringProp>
+            <stringProp name="Header.value">Bearer ${__P(newAuthorization,)}</stringProp>
+          </elementProp>
+          <elementProp name="Content-Type" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
           </elementProp>
         </collectionProp>
       </HeaderManager>
@@ -278,6 +297,85 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <stringProp name="HTTPSampler.response_timeout"></stringProp>
       </ConfigTestElement>
       <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="测试线程组无需打开" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="false">
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <boolProp name="resetInterpreter">false</boolProp>
+          <stringProp name="script">String a1=props.get(&quot;newAuthorization&quot;);
+log.info(a1);
+vars.put(&quot;Authorization&quot;,a1);
+</stringProp>
+        </BeanShellPreProcessor>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/test/${__P(newAuthorization,)}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/ContractProvision/Insert 添加合同条款" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
@@ -636,6 +734,18 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
@@ -671,18 +781,6 @@ AppendFile.appendFile(filepath,content);</stringProp>
             </objProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="181129529">Return_data</stringProp>
-              <stringProp name="1477632">0000</stringProp>
-              <stringProp name="1094873850">请求成功</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-          </ResponseAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>
@@ -794,7 +892,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/ContractProvision/DetailListByID删除合同条款！！！" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="！！！6 api/ContractProvision/DetailListByID删除合同条款" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -895,7 +993,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1api/CoursePriceRules/List" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1api/CoursePriceRules/List 课程价格规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -981,7 +1079,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2api/CoursePriceRules/ListByType" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2api/CoursePriceRules/ListByType获取课程价格规则 根据" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1082,7 +1180,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/CoursePriceRules/FreeCourseByID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/CoursePriceRules/FreeCourseByID获取赠课规则列表，根据课程价格规则ID" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1168,7 +1266,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/CoursePriceRules/SaleByID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/CoursePriceRules/SaleByID获取优惠规则列表，根据课程价格规则ID" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1254,7 +1352,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/CoursePriceRules/SetByID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/CoursePriceRules/SetByID获取课程价格规则设置列表，根据课程价格规则ID" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1340,7 +1438,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/CoursePriceRules/SetBySetID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/CoursePriceRules/SetBySetID获取课程价格规则设置列表，根据课程价格规则设置ID" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1427,7 +1525,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/CoursePriceRules/Insert" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/CoursePriceRules/Insert添加课程价格规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1538,7 +1636,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/CoursePriceRules/Update" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/CoursePriceRules/Update更新课程价格规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1649,7 +1747,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9 api/CoursePriceRules/InsertCourseRelation" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9 api/CoursePriceRules/InsertCourseRelation添加课程价格 年级+科目+合同属性+课时梯度+赠课规则+优惠规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1762,7 +1860,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10 api/CoursePriceRules/InsertCourseSet" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10 api/CoursePriceRules/InsertCourseSet课程定价 年级+科目+合同属性+课时梯度+赠课规则+优惠规则+单价" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1775,6 +1873,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <stringProp name="TestPlan.comments">V_JGKCoursePriceRulesSet3</stringProp>
       </ThreadGroup>
       <hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
@@ -1786,15 +1885,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Coursepricerulesid&quot;: &quot;string&quot;,&#xd;
-  &quot;Grades&quot;: &quot;string&quot;,&#xd;
-  &quot;Subjects&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractpropertys&quot;: &quot;string&quot;,&#xd;
-  &quot;Classgradients&quot;: &quot;string&quot;,&#xd;
-  &quot;Freecourserules&quot;: &quot;string&quot;,&#xd;
-  &quot;Salerules&quot;: &quot;string&quot;,&#xd;
-  &quot;Price&quot;: 0&#xd;
+  &quot;Id&quot;: &quot;&quot;,&#xd;
+  &quot;Coursepricerulesid&quot;: &quot;b1cb4154-d9cb-488b-80b9-61654aac87ea&quot;,&#xd;
+  &quot;Grades&quot;: &quot;b7badcea-36d5-4958-9a51-3ecf53bef187&quot;,&#xd;
+  &quot;Subjects&quot;: &quot;6377e30e-496a-494b-95c4-f7bf3da6f05b,333c8698-7b44-49b1-a977-492a5785d31f,b1b1e4ff-24fc-4752-83fd-e76fda27c84d,a4c9867c-1279-4e60-83bc-7d8a5a5635e1,b5eedcd2-08e2-4a09-9f16-ab94011ec1c3,06d000a7-543e-4605-bb90-3df0211b50ca,5d375cc7-b277-429e-94b7-0921a9d09220,9a9b10d1-8e8e-46d4-ba82-77ec603702c9,16e4f538-f428-4164-9f1c-da8ecc8e0553&quot;,&#xd;
+  &quot;Contractpropertys&quot;: &quot;83de0f37-1906-4021-8eaa-b87952119b73,c0545d62-9627-4aa7-bf43-1d72b749ec7f&quot;,&#xd;
+  &quot;Classgradients&quot;: &quot;1f2702d1-f872-464c-9aa3-3732182c8f52&quot;,&#xd;
+  &quot;Freecourserules&quot;: &quot;0c74328b-09a3-4de8-b8e5-763530217a33&quot;,&#xd;
+  &quot;Salerules&quot;: &quot;d9a4f3b1-440c-4f8b-8bb9-499a518732a1&quot;,&#xd;
+  &quot;Price&quot;: 300&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -1851,9 +1950,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11api/CoursePriceRules/UpdateCourseSet" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11api/CoursePriceRules/UpdateCourseSet修改课程定价 年级+科目+合同属性+课时梯度+赠课规则+优惠规则+单价" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1877,15 +1988,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Coursepricerulesid&quot;: &quot;string&quot;,&#xd;
-  &quot;Grades&quot;: &quot;string&quot;,&#xd;
-  &quot;Subjects&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractpropertys&quot;: &quot;string&quot;,&#xd;
-  &quot;Classgradients&quot;: &quot;string&quot;,&#xd;
-  &quot;Freecourserules&quot;: &quot;string&quot;,&#xd;
-  &quot;Salerules&quot;: &quot;string&quot;,&#xd;
-  &quot;Price&quot;: 0&#xd;
+  &quot;Id&quot;: &quot;708C1D2D-4530-4512-A489-7861C2876D67&quot;,&#xd;
+  &quot;Coursepricerulesid&quot;: &quot;b1cb4154-d9cb-488b-80b9-61654aac87ea&quot;,&#xd;
+  &quot;Grades&quot;: &quot;b7badcea-36d5-4958-9a51-3ecf53bef187&quot;,&#xd;
+  &quot;Subjects&quot;: &quot;6377e30e-496a-494b-95c4-f7bf3da6f05b,333c8698-7b44-49b1-a977-492a5785d31f,b1b1e4ff-24fc-4752-83fd-e76fda27c84d,a4c9867c-1279-4e60-83bc-7d8a5a5635e1,b5eedcd2-08e2-4a09-9f16-ab94011ec1c3,06d000a7-543e-4605-bb90-3df0211b50ca,5d375cc7-b277-429e-94b7-0921a9d09220,9a9b10d1-8e8e-46d4-ba82-77ec603702c9,16e4f538-f428-4164-9f1c-da8ecc8e0553&quot;,&#xd;
+  &quot;Contractpropertys&quot;: &quot;83de0f37-1906-4021-8eaa-b87952119b73,c0545d62-9627-4aa7-bf43-1d72b749ec7f&quot;,&#xd;
+  &quot;Classgradients&quot;: &quot;1f2702d1-f872-464c-9aa3-3732182c8f52&quot;,&#xd;
+  &quot;Freecourserules&quot;: &quot;0c74328b-09a3-4de8-b8e5-763530217a33&quot;,&#xd;
+  &quot;Salerules&quot;: &quot;d9a4f3b1-440c-4f8b-8bb9-499a518732a1&quot;,&#xd;
+  &quot;Price&quot;: 290&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -1942,9 +2053,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="12api/CoursePriceRules/DeleteCourseSet" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="12api/CoursePriceRules/DeleteCourseSet删除课程定价" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1968,15 +2091,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Coursepricerulesid&quot;: &quot;string&quot;,&#xd;
-  &quot;Grades&quot;: &quot;string&quot;,&#xd;
-  &quot;Subjects&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractpropertys&quot;: &quot;string&quot;,&#xd;
-  &quot;Classgradients&quot;: &quot;string&quot;,&#xd;
-  &quot;Freecourserules&quot;: &quot;string&quot;,&#xd;
-  &quot;Salerules&quot;: &quot;string&quot;,&#xd;
-  &quot;Price&quot;: 0&#xd;
+  &quot;Id&quot;: &quot;708C1D2D-4530-4512-A489-7861C2876D67&quot;,&#xd;
+  &quot;Coursepricerulesid&quot;: &quot;b1cb4154-d9cb-488b-80b9-61654aac87ea&quot;,&#xd;
+  &quot;Grades&quot;: &quot;b7badcea-36d5-4958-9a51-3ecf53bef187&quot;,&#xd;
+  &quot;Subjects&quot;: &quot;6377e30e-496a-494b-95c4-f7bf3da6f05b,333c8698-7b44-49b1-a977-492a5785d31f,b1b1e4ff-24fc-4752-83fd-e76fda27c84d,a4c9867c-1279-4e60-83bc-7d8a5a5635e1,b5eedcd2-08e2-4a09-9f16-ab94011ec1c3,06d000a7-543e-4605-bb90-3df0211b50ca,5d375cc7-b277-429e-94b7-0921a9d09220,9a9b10d1-8e8e-46d4-ba82-77ec603702c9,16e4f538-f428-4164-9f1c-da8ecc8e0553&quot;,&#xd;
+  &quot;Contractpropertys&quot;: &quot;83de0f37-1906-4021-8eaa-b87952119b73,c0545d62-9627-4aa7-bf43-1d72b749ec7f&quot;,&#xd;
+  &quot;Classgradients&quot;: &quot;1f2702d1-f872-464c-9aa3-3732182c8f52&quot;,&#xd;
+  &quot;Freecourserules&quot;: &quot;0c74328b-09a3-4de8-b8e5-763530217a33&quot;,&#xd;
+  &quot;Salerules&quot;: &quot;d9a4f3b1-440c-4f8b-8bb9-499a518732a1&quot;,&#xd;
+  &quot;Price&quot;: 290&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -2033,9 +2156,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="13 api/CoursePriceRules/Check" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="13 api/CoursePriceRules/Check检查是否有课程价格(城市,合同类型)重复的规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2054,21 +2189,13 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="id" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">id</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/CoursePriceRules/Check</stringProp>
+            <stringProp name="HTTPSampler.path">api/CoursePriceRules/Check/5245FF86-360C-4679-A5DE-0008A24F758E 5245FF86-360C-4679-A5DE-0008A24F758E</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -2115,9 +2242,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="14 api/CoursePriceRules/UpdateStatus" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="14 api/CoursePriceRules/UpdateStatus修改课程价格状态" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2132,6 +2271,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="Content-Type" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
@@ -2141,13 +2289,13 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Startdate&quot;: &quot;string&quot;,&#xd;
-  &quot;Enddate&quot;: &quot;string&quot;,&#xd;
-  &quot;Citys&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttypes&quot;: &quot;string&quot;,&#xd;
+  &quot;Id&quot;: &quot;BD98C983-EFA0-44A0-A188-13BBE91B4386&quot;,&#xd;
+  &quot;Linetype&quot;: 3,&#xd;
+  &quot;Name&quot;: &quot;1对3常规课程-涨价0.6T${__Random(1,10000,)}&quot;,&#xd;
+  &quot;Startdate&quot;: &quot;2019-04-03&quot;,&#xd;
+  &quot;Enddate&quot;: &quot;2021-04-03&quot;,&#xd;
+  &quot;Citys&quot;: &quot;&quot;,&#xd;
+  &quot;Contracttypes&quot;: &quot;&quot;,&#xd;
   &quot;Status&quot;: 0&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
@@ -2205,9 +2353,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/FreeCourseRules/List" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/FreeCourseRules/List获取赠课规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2222,6 +2382,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="Content-Type" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
@@ -2231,11 +2400,11 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Linetype&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Pagesize&quot;: 0,&#xd;
-  &quot;Curpage&quot;: 0&#xd;
+  &quot;Linetype&quot;: 2,&#xd;
+  &quot;Type&quot;: 1,&#xd;
+  &quot;Status&quot;: 2,&#xd;
+  &quot;Pagesize&quot;: 10,&#xd;
+  &quot;Curpage&quot;: 1&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -2292,9 +2461,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/FreeCourseRules/Copy" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/FreeCourseRules/Copy复制赠课规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2309,6 +2490,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="Content-Type" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
@@ -2318,12 +2508,12 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Dimension&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Id&quot;: &quot;B03BD158-F38A-4CC2-9434-2C348DCDF5C2&quot;,&#xd;
+  &quot;Name&quot;: &quot;testaaaaa&quot;,&#xd;
+  &quot;Dimension&quot;: 2,&#xd;
+  &quot;Status&quot;: 2,&#xd;
+  &quot;Type&quot;: 1,&#xd;
+  &quot;Linetype&quot;: 2&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -2380,9 +2570,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/FreeCourseRules/Insert" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/FreeCourseRules/Insert新增赠课规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2397,6 +2599,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="Content-Type" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
@@ -2406,12 +2617,12 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Dimension&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Id&quot;: &quot;0&quot;,&#xd;
+  &quot;Name&quot;: &quot;testinsert&quot;,&#xd;
+  &quot;Dimension&quot;: 2,&#xd;
+  &quot;Status&quot;: 2,&#xd;
+  &quot;Type&quot;: 1,&#xd;
+  &quot;Linetype&quot;: 2&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -2468,9 +2679,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/FreeCourseRules/InsertDeatil" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/FreeCourseRules/InsertDeatil新增赠课规则详细" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2485,6 +2708,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="Content-Type" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
@@ -2494,15 +2726,15 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Dimension&quot;: 0,&#xd;
-  &quot;Freecourserulesid&quot;: &quot;string&quot;,&#xd;
-  &quot;Startindex&quot;: 0,&#xd;
-  &quot;Endindex&quot;: 0,&#xd;
+  &quot;Id&quot;: &quot;0&quot;,&#xd;
+  &quot;Dimension&quot;: 2,&#xd;
+  &quot;Freecourserulesid&quot;: &quot;83DD46F7-8CF9-48C4-BBA7-59C8FBC73FAF&quot;,&#xd;
+  &quot;Startindex&quot;: 30,&#xd;
+  &quot;Endindex&quot;: 59,&#xd;
   &quot;Appendstartindex&quot;: 0,&#xd;
   &quot;Appendendindex&quot;: 0,&#xd;
-  &quot;Count&quot;: 0,&#xd;
-  &quot;Ratio&quot;: 0&#xd;
+  &quot;Count&quot;: 6,&#xd;
+  &quot;Ratio&quot;: 0.00&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -2559,9 +2791,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/FreeCourseRules/ListByLinetype" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/FreeCourseRules/ListByLinetype根据事业线，获取赠课规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2576,25 +2820,26 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="Content-Type" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="linetype" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">linetype</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/FreeCourseRules/ListByLinetype</stringProp>
+            <stringProp name="HTTPSampler.path">api/FreeCourseRules/ListByLinetype/1</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -2641,9 +2886,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/FreeCourseRules/UpdateStatus" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/FreeCourseRules/UpdateStatus修改赠课规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2667,13 +2924,14 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Dimension&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
-}</stringProp>
+  &quot;Id&quot;: &quot;83DD46F7-8CF9-48C4-BBA7-59C8FBC73FAF&quot;,&#xd;
+  &quot;Name&quot;: &quot;testinsert&quot;,&#xd;
+  &quot;Dimension&quot;: 2,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Type&quot;: 1,&#xd;
+  &quot;Linetype&quot;: 2&#xd;
+}&#xd;
+</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -2729,9 +2987,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/FreeCourseRules/DetailListById" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/FreeCourseRules/DetailListById通过获取赠课规则ID，获取赠课规则详情" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2750,21 +3020,99 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="id" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">id</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/FreeCourseRules/DetailListById</stringProp>
+            <stringProp name="HTTPSampler.path">api/FreeCourseRules/DetailListById/050C1763-7B89-4BD5-B6B5-F812972464B4</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 ！！！api/FreeCourseRules/DetailBySetId根据赠送规则设置ID（T_JGKPriceRules_FreeCourse）， 查询赠课详情" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1552876922000</longProp>
+        <longProp name="ThreadGroup.end_time">1552876922000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/FreeCourseRules/DetailBySetId/E866DB65-4094-49F3-8D13-9FB078480593?setid=B86F8BEB-E707-474A-9B73-DA51CAF91BDE</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -2813,96 +3161,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/FreeCourseRules/DetailBySetId" enabled="false">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
-        <longProp name="ThreadGroup.start_time">1552876922000</longProp>
-        <longProp name="ThreadGroup.end_time">1552876922000</longProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration"></stringProp>
-        <stringProp name="ThreadGroup.delay"></stringProp>
-      </ThreadGroup>
-      <hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="setid" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">setid</stringProp>
-                </elementProp>
-                <elementProp name="id" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">id</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain"></stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/FreeCourseRules/DetailBySetId</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-        </hashTree>
-      </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/Price/AuthLogin" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/Price/InsertLogHis添加操作日志" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2926,93 +3185,8 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Account&quot;: &quot;string&quot;,&#xd;
-  &quot;Password&quot;: &quot;string&quot;,&#xd;
-  &quot;LoginType&quot;: 0&#xd;
-}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain"></stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/Price/AuthLogin</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-        </hashTree>
-      </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/Price/InsertLogHis" enabled="false">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
-        <longProp name="ThreadGroup.start_time">1552876922000</longProp>
-        <longProp name="ThreadGroup.end_time">1552876922000</longProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration"></stringProp>
-        <stringProp name="ThreadGroup.delay"></stringProp>
-      </ThreadGroup>
-      <hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
-            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&#xd;
-  &quot;Msg&quot;: &quot;string&quot;,&#xd;
-  &quot;Logtype&quot;: 0&#xd;
+  &quot;Msg&quot;: &quot;test123&quot;,&#xd;
+  &quot;Logtype&quot;: 2&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -3069,9 +3243,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/Price/ListByPage" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/Price/ListByPage字典列表(分页)" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3095,12 +3281,13 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Linetype&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Pagesize&quot;: 0,&#xd;
-  &quot;Curpage&quot;: 0&#xd;
-}</stringProp>
+  &quot;Linetype&quot;: 3,&#xd;
+  &quot;Type&quot;: 5,&#xd;
+  &quot;Status&quot;: 2,&#xd;
+  &quot;Pagesize&quot;: 10,&#xd;
+  &quot;Curpage&quot;: 1&#xd;
+}&#xd;
+</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -3156,9 +3343,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/Price/ListByID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/Price/ListByID字典明细" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3177,21 +3376,13 @@ AppendFile.appendFile(filepath,content);</stringProp>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="id" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">id</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/Price/ListByID</stringProp>
+            <stringProp name="HTTPSampler.path">api/Price/ListByID/184E9D50-3B1A-4ED8-83BE-003FE52B7FF2</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -3238,9 +3429,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/Price/ListByType" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/Price/ListByType根据类型查询字典" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3262,14 +3465,14 @@ AppendFile.appendFile(filepath,content);</stringProp>
               <collectionProp name="Arguments.arguments">
                 <elementProp name="type" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">type</stringProp>
                 </elementProp>
                 <elementProp name="linetype" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.value">1</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                   <stringProp name="Argument.name">linetype</stringProp>
@@ -3327,9 +3530,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/Price/Insert" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/Price/Insert添加字典信息" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3353,13 +3568,13 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Value&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;CreateUser&quot;: &quot;string&quot;&#xd;
+  &quot;Id&quot;: &quot;0&quot;,&#xd;
+  &quot;Name&quot;: &quot;test1对3-2017全国双十一&quot;,&#xd;
+  &quot;Value&quot;: &quot;65&quot;,&#xd;
+  &quot;Linetype&quot;: 3,&#xd;
+  &quot;Type&quot;: 5,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;CreateUser&quot;: &quot;0100140&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -3368,7 +3583,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
             <stringProp name="HTTPSampler.path">api/Price/Insert</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -3416,9 +3631,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7api/Price/Update" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7api/Price/Update修改字典信息" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3442,13 +3669,13 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Value&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;CreateUser&quot;: &quot;string&quot;&#xd;
+  &quot;Id&quot;: &quot;EE63776F-1570-4EA2-A7CF-721B9D1130BD&quot;,&#xd;
+  &quot;Name&quot;: &quot;test1对3-2017全国双十一&quot;,&#xd;
+  &quot;Value&quot;: &quot;65&quot;,&#xd;
+  &quot;Linetype&quot;: 3,&#xd;
+  &quot;Type&quot;: 5,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;CreateUser&quot;: &quot;0100140&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -3457,7 +3684,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
             <stringProp name="HTTPSampler.path">api/Price/Update</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -3505,9 +3732,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/Price/UpdateStatus" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/Price/UpdateStatus修改字典状态" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3531,13 +3770,13 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Value&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
+  &quot;Id&quot;: &quot;EE63776F-1570-4EA2-A7CF-721B9D1130BD&quot;,&#xd;
+  &quot;Name&quot;: &quot;test1对3-2017全国双十一&quot;,&#xd;
+  &quot;Value&quot;: &quot;65&quot;,&#xd;
+  &quot;Linetype&quot;: 3,&#xd;
+  &quot;Type&quot;: 5,&#xd;
   &quot;Status&quot;: 0,&#xd;
-  &quot;CreateUser&quot;: &quot;string&quot;&#xd;
+  &quot;CreateUser&quot;: &quot;0100140&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -3593,6 +3832,18 @@ AppendFile.appendFile(filepath,content);</stringProp>
             </objProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>
@@ -3668,9 +3919,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PriceForZH/ListByCondition根据条件获取 科目 课时" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 （智慧接口不做测试）api/PriceForZH/ListByCondition根据条件获取 科目 课时" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3757,9 +4020,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceForZH/PriceByCondition根据条件获取 单价" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 （智慧接口不做测试）api/PriceForZH/PriceByCondition根据条件获取 单价" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3848,7 +4123,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceForZH/FreeAndSaleInfoByCondition根据条件获取 一维 常规赠送 优惠金额" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 （智慧接口不做测试）api/PriceForZH/FreeAndSaleInfoByCondition根据条件获取 一维 常规赠送 优惠金额" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3937,7 +4212,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceForZH/PromotionRuleList" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 （智慧接口不做测试）api/PriceForZH/PromotionRuleList" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4021,7 +4296,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PriceOneVOne/CoursePrice" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PriceOneVOne/CoursePrice根据条件获取课程和单价列表（1对1）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4045,12 +4320,12 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;string&quot;,&#xd;
-  &quot;Pricetype&quot;: &quot;string&quot;&#xd;
+  &quot;City&quot;: &quot;243,270&quot;,&#xd;
+  &quot;Grade&quot;: &quot;11&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;2&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;193&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2019-02-28&quot;,&#xd;
+  &quot;Pricetype&quot;: &quot;2&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -4069,6 +4344,8 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">SELECT a.CoursePriceRulesId,ContractTypeValue,StartDate,CityValue,LineType,[Status],b.GradeValue,b.ContractPropertieValue FROM dbo.TB_JGKCoursePriceRules a INNER JOIN TB_JGKCoursePriceRulesSet b ON 
+a.CoursePriceRulesId=b.CoursePriceRulesId WHERE a.Status=4</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -4107,9 +4384,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceOneVOne/FreeCourseHoursByDimension" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceOneVOne/FreeCourseHoursByDimension二维获取赠送课时数/课时比率 （1对1）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4133,15 +4422,16 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;2019-03-19T03:14:04.313Z&quot;,&#xd;
-  &quot;Totalhours&quot;: &quot;string&quot;,&#xd;
-  &quot;Hstype&quot;: &quot;string&quot;,&#xd;
-  &quot;Hssum&quot;: &quot;string&quot;&#xd;
-}</stringProp>
+  &quot;City&quot;: &quot;229&quot;,&#xd;
+  &quot;Grade&quot;: &quot;16&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;1&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;1&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2019-03-07&quot;,&#xd;
+  &quot;Totalhours&quot;: &quot;100&quot;,&#xd;
+  &quot;Hstype&quot;: &quot;&quot;,&#xd;
+  &quot;Hssum&quot;: &quot;125&quot;&#xd;
+}&#xd;
+</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -4159,6 +4449,14 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKSearchFreeCourseHoursByDimension
+SELECT  TOP 10 *  FROM  dbo.TB_JGKCoursePriceRules WHERE Name =&apos;常规课程-FY19暑假0.76T-1&apos;
+
+SELECT TOP 10 *  FROM T_JGKFreeCourseRules  WHERE name =&apos;FY19暑假连报赠送：B优惠&apos; AND Status =2  AND LineType =2
+
+SELECT TOP 10 * FROM TB_JGKCoursePriceRulesSet WHERE CoursePriceRulesId  =&apos;5CB6880B-E78B-44D7-9BB4-6517AD4049A4&apos; AND GradeName =&apos;小三&apos;
+
+SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD158-F38A-4CC2-9434-2C348DCDF5C2&apos;</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -4197,9 +4495,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceOneVOne/FreeCourseHours" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceOneVOne/FreeCourseHours根据条件获取获取赠送课时数（1对1）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4223,14 +4533,14 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;2019-03-19T03:14:04.325Z&quot;,&#xd;
-  &quot;Totalhours&quot;: &quot;string&quot;,&#xd;
-  &quot;Hstype&quot;: &quot;string&quot;,&#xd;
-  &quot;Hssum&quot;: &quot;string&quot;&#xd;
+  &quot;City&quot;: &quot;229&quot;,&#xd;
+  &quot;Grade&quot;: &quot;16&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;1&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;1&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2019-03-07&quot;,&#xd;
+  &quot;Totalhours&quot;: &quot;100&quot;,&#xd;
+  &quot;Hstype&quot;: &quot;&quot;,&#xd;
+  &quot;Hssum&quot;: &quot;125&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -4249,6 +4559,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKSearchFreeCourseHours</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -4287,9 +4598,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceOneVOne/PromotionRule" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceOneVOne/PromotionRule获取促销规则" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4313,9 +4636,9 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Createdate&quot;: &quot;string&quot;,&#xd;
-  &quot;Deptid&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractid&quot;: &quot;string&quot;&#xd;
+  &quot;Createdate&quot;: &quot;2019-04-29&quot;,&#xd;
+  &quot;Deptid&quot;: &quot;4&quot;,&#xd;
+  &quot;Contractid&quot;: &quot;260&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -4372,9 +4695,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1  api/PriceOneVThree/CoursePrice" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1  api/PriceOneVThree/CoursePrice根据条件获取课程和单价列表（1对3）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4398,12 +4733,12 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;string&quot;,&#xd;
-  &quot;Pricetype&quot;: &quot;string&quot;&#xd;
+  &quot;City&quot;: &quot;294&quot;,&#xd;
+  &quot;Grade&quot;: &quot;16&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;1&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;1&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2018-09-30&quot;,&#xd;
+  &quot;Pricetype&quot;: &quot;3&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -4422,6 +4757,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKSearchCoursePrice</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -4460,9 +4796,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceOneVThree/FreeCourseHoursByDimension" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceOneVThree/FreeCourseHoursByDimension二维获取赠送课时数/课时比率 （1对3）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4486,15 +4834,16 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;2019-03-19T03:14:04.355Z&quot;,&#xd;
-  &quot;Totalhours&quot;: &quot;string&quot;,&#xd;
-  &quot;Hstype&quot;: &quot;string&quot;,&#xd;
-  &quot;Hssum&quot;: &quot;string&quot;&#xd;
-}</stringProp>
+  &quot;City&quot;: &quot;294&quot;,&#xd;
+  &quot;Grade&quot;: &quot;16&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;1&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;1&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2018-09-30&quot;,&#xd;
+  &quot;Totalhours&quot;: &quot;5&quot;,&#xd;
+  &quot;Hstype&quot;: &quot;&quot;,&#xd;
+  &quot;Hssum&quot;: &quot;0&quot;&#xd;
+}&#xd;
+</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -4512,6 +4861,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKSearchFreeCourseHoursByDimension</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -4550,9 +4900,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceOneVThree/FreeCourseHours" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceOneVThree/FreeCourseHours根据条件获取获取赠送课时数（1对3）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4576,15 +4938,16 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;2019-03-19T03:14:04.366Z&quot;,&#xd;
-  &quot;Totalhours&quot;: &quot;string&quot;,&#xd;
-  &quot;Hstype&quot;: &quot;string&quot;,&#xd;
-  &quot;Hssum&quot;: &quot;string&quot;&#xd;
-}</stringProp>
+  &quot;City&quot;: &quot;294&quot;,&#xd;
+  &quot;Grade&quot;: &quot;16&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;1&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;1&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2018-09-30&quot;,&#xd;
+  &quot;Totalhours&quot;: &quot;5&quot;,&#xd;
+  &quot;Hstype&quot;: &quot;&quot;,&#xd;
+  &quot;Hssum&quot;: &quot;0&quot;&#xd;
+}&#xd;
+</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -4602,6 +4965,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKSearchFreeCourseHours</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -4638,11 +5002,24 @@ AppendFile.appendFile(filepath,content);</stringProp>
               </value>
             </objProp>
             <stringProp name="filename"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKSearchFreeCourseHours</stringProp>
           </ResultCollector>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceOneVThree/SalePrices" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceOneVThree/SalePrices根据条件获取获取优惠价格" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4666,14 +5043,14 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;2019-03-19T03:14:04.372Z&quot;,&#xd;
-  &quot;Totalhours&quot;: &quot;string&quot;,&#xd;
-  &quot;Hstype&quot;: &quot;string&quot;,&#xd;
-  &quot;Hssum&quot;: &quot;string&quot;&#xd;
+  &quot;City&quot;: &quot;294&quot;,&#xd;
+  &quot;Grade&quot;: &quot;8&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;1&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;1&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2018-09-30&quot;,&#xd;
+  &quot;Totalhours&quot;: &quot;722&quot;,&#xd;
+  &quot;Hstype&quot;: &quot;&quot;,&#xd;
+  &quot;Hssum&quot;: &quot;0&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -4692,6 +5069,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKSearchSalePrice</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -4729,6 +5107,18 @@ AppendFile.appendFile(filepath,content);</stringProp>
             </objProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>
@@ -4756,9 +5146,9 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Createdate&quot;: &quot;string&quot;,&#xd;
-  &quot;Deptid&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractid&quot;: &quot;string&quot;&#xd;
+  &quot;Createdate&quot;: &quot;2019-01-01&quot;,&#xd;
+  &quot;Deptid&quot;: &quot;3&quot;,&#xd;
+  &quot;Contractid&quot;: &quot;95&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -4777,6 +5167,7 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKSearchPromotionRule</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -4815,9 +5206,21 @@ AppendFile.appendFile(filepath,content);</stringProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PriceYX/CoursePrice" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PriceYX/CoursePrice" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4841,13 +5244,14 @@ AppendFile.appendFile(filepath,content);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;string&quot;,&#xd;
-  &quot;Pricetype&quot;: &quot;string&quot;&#xd;
-}</stringProp>
+  &quot;City&quot;: &quot;1000&quot;,&#xd;
+  &quot;Grade&quot;: &quot;16&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;1&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;4&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2018-07-24&quot;,&#xd;
+  &quot;Pricetype&quot;: &quot;&quot;&#xd;
+}&#xd;
+</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -4902,6 +5306,18 @@ AppendFile.appendFile(filepath,content);</stringProp>
             </objProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>
