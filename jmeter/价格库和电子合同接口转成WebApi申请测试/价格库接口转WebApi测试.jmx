@@ -376,7 +376,7 @@ vars.put(&quot;Authorization&quot;,a1);
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/ContractProvision/Insert 添加合同条款" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/ContractProvision/Insert 添加合同条款" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -484,7 +484,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 InsertProvisionDetail添加合同条款明细" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 InsertProvisionDetail添加合同条款明细" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -591,7 +591,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3UpdateProvisionDetail更新合同条款明细" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3UpdateProvisionDetail更新合同条款明细" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -698,7 +698,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 ListByDictionaryID根据字典分类ID，获取合同条款" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 ListByDictionaryID根据字典分类ID，获取合同条款" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -784,7 +784,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/ContractProvision/Update更新合同条款" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/ContractProvision/Update更新合同条款" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -892,7 +892,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="！！！6 api/ContractProvision/DetailListByID删除合同条款" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/ContractProvision/DetailListByID删除合同条款" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -993,7 +993,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1api/CoursePriceRules/List 课程价格规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1api/CoursePriceRules/List 课程价格规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1079,7 +1079,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2api/CoursePriceRules/ListByType获取课程价格规则 根据" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2api/CoursePriceRules/ListByType获取课程价格规则 根据" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1180,7 +1180,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/CoursePriceRules/FreeCourseByID获取赠课规则列表，根据课程价格规则ID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/CoursePriceRules/FreeCourseByID获取赠课规则列表，根据课程价格规则ID" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1266,7 +1266,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/CoursePriceRules/SaleByID获取优惠规则列表，根据课程价格规则ID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/CoursePriceRules/SaleByID获取优惠规则列表，根据课程价格规则ID" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1352,7 +1352,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/CoursePriceRules/SetByID获取课程价格规则设置列表，根据课程价格规则ID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/CoursePriceRules/SetByID获取课程价格规则设置列表，根据课程价格规则ID" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1438,7 +1438,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/CoursePriceRules/SetBySetID获取课程价格规则设置列表，根据课程价格规则设置ID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/CoursePriceRules/SetBySetID获取课程价格规则设置列表，根据课程价格规则设置ID" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1525,7 +1525,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/CoursePriceRules/Insert添加课程价格规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/CoursePriceRules/Insert添加课程价格规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1636,7 +1636,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/CoursePriceRules/Update更新课程价格规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/CoursePriceRules/Update更新课程价格规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1747,7 +1747,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9 api/CoursePriceRules/InsertCourseRelation添加课程价格 年级+科目+合同属性+课时梯度+赠课规则+优惠规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9api/CoursePriceRules/InsertCourseRelation添加课程价格 年级+科目+合同属性+课时梯度+赠课规则+优惠规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1780,15 +1780,13 @@ vars.put(&quot;Authorization&quot;,a1);
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;0&quot;,&#xd;
-  &quot;Coursepricerulesid&quot;: &quot;BD98C983-EFA0-44A0-A188-13BBE91B4386&quot;,&#xd;
-  &quot;Grades&quot;: &quot;8,4,2,3,9,1,6,5,7&quot;,&#xd;
-  &quot;Subjects&quot;: &quot;7,6,2,8,4,5,10,3,1&quot;,&#xd;
-  &quot;Contractpropertys&quot;: &quot;C0545D62-9627-4AA7-BF43-1D72B749EC7F,83DE0F37-1906-4021-8EAA-B87952119B73&quot;,&#xd;
-  &quot;Classgradients&quot;: &quot;零梯度&quot;,&#xd;
-  &quot;Freecourserules&quot;: &quot;2DB4DDC4-13DE-49AB-B8F1-E810A16FE332&quot;,&#xd;
-  &quot;Salerules&quot;: &quot;D9A4F3B1-440C-4F8B-8BB9-499A518732A1&quot;,&#xd;
-  &quot;Price&quot;: 215.00&#xd;
+  &quot;Coursepricerulesid&quot;: &quot;c3a5f6e5-7916-47dc-95d0-a0eb56edbea8&quot;,&#xd;
+  &quot;Grades&quot;: &quot;b7badcea-36d5-4958-9a51-3ecf53bef187,39f7c72e-8de7-47d2-9148-0fdc5c73ba44,32bb8146-a24c-4373-ac1b-61db3f2d7ba1,1cf41bb2-2ce9-4f5e-92dd-173cfa78497a,0cffed36-9737-430a-9b92-ce252e899b89,a03d9308-84eb-40f2-a0d8-f9bb497b3cc4,88814ecf-bc36-4fd6-8e3c-21b569c73b80,e756ea8b-41af-40e9-b9a5-e752e433e345,875fc240-7e14-4ada-96ef-ebd41c17fcc5,32c1ace9-aa01-45c8-9320-ce69ec1546da&quot;,&#xd;
+  &quot;Subjects&quot;: &quot;6377e30e-496a-494b-95c4-f7bf3da6f05b,333c8698-7b44-49b1-a977-492a5785d31f,b1b1e4ff-24fc-4752-83fd-e76fda27c84d,a4c9867c-1279-4e60-83bc-7d8a5a5635e1,b5eedcd2-08e2-4a09-9f16-ab94011ec1c3,06d000a7-543e-4605-bb90-3df0211b50ca,5d375cc7-b277-429e-94b7-0921a9d09220,9a9b10d1-8e8e-46d4-ba82-77ec603702c9,16e4f538-f428-4164-9f1c-da8ecc8e0553&quot;,&#xd;
+  &quot;Contractpropertys&quot;: &quot;c0545d62-9627-4aa7-bf43-1d72b749ec7f,83de0f37-1906-4021-8eaa-b87952119b73&quot;,&#xd;
+  &quot;Classgradients&quot;: &quot;1f2702d1-f872-464c-9aa3-3732182c8f52&quot;,&#xd;
+  &quot;Freecourserules&quot;: &quot;0c74328b-09a3-4de8-b8e5-763530217a33&quot;,&#xd;
+  &quot;Salerules&quot;: &quot;d9a4f3b1-440c-4f8b-8bb9-499a518732a1&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -1860,7 +1858,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10 api/CoursePriceRules/InsertCourseSet课程定价 年级+科目+合同属性+课时梯度+赠课规则+优惠规则+单价" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10 api/CoursePriceRules/InsertCourseSet课程定价 年级+科目+合同属性+课时梯度+赠课规则+优惠规则+单价" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1964,7 +1962,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11api/CoursePriceRules/UpdateCourseSet修改课程定价 年级+科目+合同属性+课时梯度+赠课规则+优惠规则+单价" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11api/CoursePriceRules/UpdateCourseSet修改课程定价 年级+科目+合同属性+课时梯度+赠课规则+优惠规则+单价" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2067,7 +2065,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="12api/CoursePriceRules/DeleteCourseSet删除课程定价" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="12api/CoursePriceRules/DeleteCourseSet删除课程定价" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2170,7 +2168,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="13 api/CoursePriceRules/Check检查是否有课程价格(城市,合同类型)重复的规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="13 api/CoursePriceRules/Check检查是否有课程价格(城市,合同类型)重复的规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2256,7 +2254,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="14 api/CoursePriceRules/UpdateStatus修改课程价格状态" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="14 api/CoursePriceRules/UpdateStatus修改课程价格状态" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2367,7 +2365,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/FreeCourseRules/List获取赠课规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/FreeCourseRules/List获取赠课规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2475,7 +2473,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/FreeCourseRules/Copy复制赠课规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/FreeCourseRules/Copy复制赠课规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2584,7 +2582,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/FreeCourseRules/Insert新增赠课规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/FreeCourseRules/Insert新增赠课规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2693,7 +2691,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/FreeCourseRules/InsertDeatil新增赠课规则详细" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/FreeCourseRules/InsertDeatil新增赠课规则详细" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2805,7 +2803,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/FreeCourseRules/ListByLinetype根据事业线，获取赠课规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/FreeCourseRules/ListByLinetype根据事业线，获取赠课规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2900,7 +2898,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/FreeCourseRules/UpdateStatus修改赠课规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/FreeCourseRules/UpdateStatus修改赠课规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3001,7 +2999,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/FreeCourseRules/DetailListById通过获取赠课规则ID，获取赠课规则详情" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/FreeCourseRules/DetailListById通过获取赠课规则ID，获取赠课规则详情" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3087,7 +3085,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 ！！！api/FreeCourseRules/DetailBySetId根据赠送规则设置ID（T_JGKPriceRules_FreeCourse）， 查询赠课详情" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/FreeCourseRules/DetailBySetId根据赠送规则设置ID（T_JGKPriceRules_FreeCourse）， 查询赠课详情" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3112,7 +3110,7 @@ vars.put(&quot;Authorization&quot;,a1);
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/FreeCourseRules/DetailBySetId/E866DB65-4094-49F3-8D13-9FB078480593?setid=B86F8BEB-E707-474A-9B73-DA51CAF91BDE</stringProp>
+            <stringProp name="HTTPSampler.path">api/FreeCourseRules/DetailBySetId/104424cf-d6c7-4fff-b61a-2ef7e7680188</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -3159,9 +3157,21 @@ vars.put(&quot;Authorization&quot;,a1);
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/Price/InsertLogHis添加操作日志" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/Price/InsertLogHis添加操作日志" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3257,7 +3267,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/Price/ListByPage字典列表(分页)" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/Price/ListByPage字典列表(分页)" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3357,7 +3367,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/Price/ListByID字典明细" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/Price/ListByID字典明细" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3443,7 +3453,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/Price/ListByType根据类型查询字典" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/Price/ListByType根据类型查询字典" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3544,7 +3554,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/Price/Insert添加字典信息" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/Price/Insert添加字典信息" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3645,7 +3655,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7api/Price/Update修改字典信息" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7api/Price/Update修改字典信息" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3746,7 +3756,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/Price/UpdateStatus修改字典状态" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/Price/UpdateStatus修改字典状态" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3847,7 +3857,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9 api/Price/AutoUpdateStatus" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9 api/Price/AutoUpdateStatus" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4296,7 +4306,7 @@ vars.put(&quot;Authorization&quot;,a1);
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PriceOneVOne/CoursePrice根据条件获取课程和单价列表（1对1）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PriceOneVOne/CoursePrice根据条件获取课程和单价列表（1对1）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4398,7 +4408,7 @@ a.CoursePriceRulesId=b.CoursePriceRulesId WHERE a.Status=4</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceOneVOne/FreeCourseHoursByDimension二维获取赠送课时数/课时比率 （1对1）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceOneVOne/FreeCourseHoursByDimension二维获取赠送课时数/课时比率 （1对1）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4509,7 +4519,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceOneVOne/FreeCourseHours根据条件获取获取赠送课时数（1对1）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceOneVOne/FreeCourseHours根据条件获取获取赠送课时数（1对1）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4612,7 +4622,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceOneVOne/PromotionRule获取促销规则" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceOneVOne/PromotionRule获取促销规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4709,7 +4719,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1  api/PriceOneVThree/CoursePrice根据条件获取课程和单价列表（1对3）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1  api/PriceOneVThree/CoursePrice根据条件获取课程和单价列表（1对3）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4810,7 +4820,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceOneVThree/FreeCourseHoursByDimension二维获取赠送课时数/课时比率 （1对3）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceOneVThree/FreeCourseHoursByDimension二维获取赠送课时数/课时比率 （1对3）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4914,7 +4924,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceOneVThree/FreeCourseHours根据条件获取获取赠送课时数（1对3）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceOneVThree/FreeCourseHours根据条件获取获取赠送课时数（1对3）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5019,7 +5029,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceOneVThree/SalePrices根据条件获取获取优惠价格" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceOneVThree/SalePrices根据条件获取获取优惠价格" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5122,7 +5132,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/PriceOneVThree/PromotionRule" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/PriceOneVThree/PromotionRule获取促销规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5220,7 +5230,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PriceYX/CoursePrice" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PriceYX/CoursePrice根据条件获取课程和单价列表1对1（游学）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5321,7 +5331,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceYX/FreeCourseHoursByDimension" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PriceYX/FreeCourseHoursByDimension二维获取赠课1对1（游学）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5345,14 +5355,14 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;2019-03-19T03:14:04.395Z&quot;,&#xd;
-  &quot;Totalhours&quot;: &quot;string&quot;,&#xd;
-  &quot;Hstype&quot;: &quot;string&quot;,&#xd;
-  &quot;Hssum&quot;: &quot;string&quot;&#xd;
+  &quot;City&quot;: &quot;31&quot;,&#xd;
+  &quot;Grade&quot;: &quot;16&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;1&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;4&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2018-06-22&quot;,&#xd;
+  &quot;Totalhours&quot;: &quot;5&quot;,&#xd;
+  &quot;Hstype&quot;: &quot;&quot;,&#xd;
+  &quot;Hssum&quot;: &quot;0&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -5409,9 +5419,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceYX/FreeCourseHours" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PriceYX/FreeCourseHours一维获取赠课1对1（游学）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5435,14 +5457,14 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;City&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractproperty&quot;: &quot;string&quot;,&#xd;
-  &quot;Contracttype&quot;: &quot;string&quot;,&#xd;
-  &quot;Createdate&quot;: &quot;2019-03-19T03:14:04.405Z&quot;,&#xd;
-  &quot;Totalhours&quot;: &quot;string&quot;,&#xd;
-  &quot;Hstype&quot;: &quot;string&quot;,&#xd;
-  &quot;Hssum&quot;: &quot;string&quot;&#xd;
+  &quot;City&quot;: &quot;31&quot;,&#xd;
+  &quot;Grade&quot;: &quot;16&quot;,&#xd;
+  &quot;Contractproperty&quot;: &quot;1&quot;,&#xd;
+  &quot;Contracttype&quot;: &quot;4&quot;,&#xd;
+  &quot;Createdate&quot;: &quot;2018-06-22&quot;,&#xd;
+  &quot;Totalhours&quot;: &quot;5&quot;,&#xd;
+  &quot;Hstype&quot;: &quot;&quot;,&#xd;
+  &quot;Hssum&quot;: &quot;0&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -5501,7 +5523,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PriceYX/PromotionRule" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 ！！！api/PriceYX/PromotionRule获取促销规则（游学）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5584,9 +5606,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PromotionRule/ListByPage" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PromotionRule/ListByPage新促销规则列表(分页)" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5610,11 +5644,11 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Linetype&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Pagesize&quot;: 0,&#xd;
-  &quot;Curpage&quot;: 0&#xd;
+  &quot;Linetype&quot;: 1,&#xd;
+  &quot;Type&quot;: 2,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Pagesize&quot;: 10,&#xd;
+  &quot;Curpage&quot;: 1&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -5633,6 +5667,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">T_JGKPromotionRule</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -5671,9 +5706,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PromotionRule/ListByID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PromotionRule/ListByID新促销规则主表" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5692,21 +5739,13 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="id" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">id</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/PromotionRule/ListByID</stringProp>
+            <stringProp name="HTTPSampler.path">api/PromotionRule/ListByID/35A4A5C5-EAD5-4531-BC2F-01C0AB8D78CF</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -5753,9 +5792,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PromotionRule/DetailListByID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PromotionRule/DetailListByID新促销规则明细" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5774,21 +5825,13 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="id" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">id</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/PromotionRule/DetailListByID</stringProp>
+            <stringProp name="HTTPSampler.path">api/PromotionRule/DetailListByID/35A4A5C5-EAD5-4531-BC2F-01C0AB8D78CF</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -5835,9 +5878,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PromotionRule/Insert" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PromotionRule/Insert添加新促销规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5861,22 +5916,22 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Ptypeid&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,&#xd;
-  &quot;Rulename&quot;: &quot;string&quot;,&#xd;
-  &quot;Startdate&quot;: &quot;2019-03-19T03:14:04.444Z&quot;,&#xd;
-  &quot;Enddate&quot;: &quot;2019-03-19T03:14:04.444Z&quot;,&#xd;
-  &quot;Minvalue&quot;: 0,&#xd;
-  &quot;Maxvalue&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Isaudit&quot;: true,&#xd;
+  &quot;Id&quot;: &quot;&quot;,&#xd;
+  &quot;Ptypeid&quot;: &quot;${__UUID}&quot;,&#xd;
+  &quot;Rulename&quot;: &quot;${__Random(1000,9999,)}&quot;,&#xd;
+  &quot;Startdate&quot;: &quot;2019-01-28&quot;,&#xd;
+  &quot;Enddate&quot;: &quot;2019-01-28&quot;,&#xd;
+  &quot;Minvalue&quot;: 18.000,&#xd;
+  &quot;Maxvalue&quot;: 18.000,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Isaudit&quot;: 1,&#xd;
   &quot;Stepvalue&quot;: 0,&#xd;
   &quot;Cyclemonth&quot;: 0,&#xd;
-  &quot;Isgrads&quot;: true,&#xd;
-  &quot;Gradsrules&quot;: &quot;string&quot;,&#xd;
-  &quot;Ismultiple&quot;: true,&#xd;
-  &quot;Remark&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Isgrads&quot;: 0,&#xd;
+  &quot;Gradsrules&quot;: &quot;&quot;,&#xd;
+  &quot;Ismultiple&quot;: 1,&#xd;
+  &quot;Remark&quot;: &quot;&quot;,&#xd;
+  &quot;Linetype&quot;: 1&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -5933,9 +5988,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/PromotionRule/Update" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/PromotionRule/Update修改新促销规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -5959,22 +6026,22 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Ptypeid&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,&#xd;
-  &quot;Rulename&quot;: &quot;string&quot;,&#xd;
-  &quot;Startdate&quot;: &quot;2019-03-19T03:14:04.452Z&quot;,&#xd;
-  &quot;Enddate&quot;: &quot;2019-03-19T03:14:04.452Z&quot;,&#xd;
-  &quot;Minvalue&quot;: 0,&#xd;
-  &quot;Maxvalue&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Isaudit&quot;: true,&#xd;
+  &quot;Id&quot;: &quot;B26DBC3D-E6FA-49AB-9DCB-7319D768C8FD&quot;,&#xd;
+  &quot;Ptypeid&quot;: &quot;F8E46D04-9642-4B2F-B0CC-2B4254C047F0&quot;,&#xd;
+  &quot;Rulename&quot;: &quot;${__Random(1000,9999,)}&quot;,&#xd;
+  &quot;Startdate&quot;: &quot;2019-01-28&quot;,&#xd;
+  &quot;Enddate&quot;: &quot;2019-01-28&quot;,&#xd;
+  &quot;Minvalue&quot;: 18.000,&#xd;
+  &quot;Maxvalue&quot;: 18.000,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Isaudit&quot;: 1,&#xd;
   &quot;Stepvalue&quot;: 0,&#xd;
   &quot;Cyclemonth&quot;: 0,&#xd;
-  &quot;Isgrads&quot;: true,&#xd;
-  &quot;Gradsrules&quot;: &quot;string&quot;,&#xd;
-  &quot;Ismultiple&quot;: true,&#xd;
-  &quot;Remark&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Isgrads&quot;: 0,&#xd;
+  &quot;Gradsrules&quot;: &quot;&quot;,&#xd;
+  &quot;Ismultiple&quot;: 1,&#xd;
+  &quot;Remark&quot;: &quot;&quot;,&#xd;
+  &quot;Linetype&quot;: 1&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -6031,9 +6098,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/PromotionRule/UpdatePtypeidStatus" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/PromotionRule/UpdatePtypeidStatus修改促销类型，根据条件" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6057,22 +6136,22 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Ptypeid&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,&#xd;
-  &quot;Rulename&quot;: &quot;string&quot;,&#xd;
-  &quot;Startdate&quot;: &quot;2019-03-19T03:14:04.462Z&quot;,&#xd;
-  &quot;Enddate&quot;: &quot;2019-03-19T03:14:04.462Z&quot;,&#xd;
-  &quot;Minvalue&quot;: 0,&#xd;
-  &quot;Maxvalue&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Isaudit&quot;: true,&#xd;
+  &quot;Id&quot;: &quot;B26DBC3D-E6FA-49AB-9DCB-7319D768C8FD&quot;,&#xd;
+  &quot;Ptypeid&quot;: &quot;F8E46D04-9642-4B2F-B0CC-2B4254C047F0&quot;,&#xd;
+  &quot;Rulename&quot;: &quot;8253&quot;,&#xd;
+  &quot;Startdate&quot;: &quot;2019-01-28&quot;,&#xd;
+  &quot;Enddate&quot;: &quot;2019-01-28&quot;,&#xd;
+  &quot;Minvalue&quot;: 18.000,&#xd;
+  &quot;Maxvalue&quot;: 18.000,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Isaudit&quot;: 1,&#xd;
   &quot;Stepvalue&quot;: 0,&#xd;
   &quot;Cyclemonth&quot;: 0,&#xd;
-  &quot;Isgrads&quot;: true,&#xd;
-  &quot;Gradsrules&quot;: &quot;string&quot;,&#xd;
-  &quot;Ismultiple&quot;: true,&#xd;
-  &quot;Remark&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Isgrads&quot;: 0,&#xd;
+  &quot;Gradsrules&quot;: &quot;&quot;,&#xd;
+  &quot;Ismultiple&quot;: 1,&#xd;
+  &quot;Remark&quot;: &quot;&quot;,&#xd;
+  &quot;Linetype&quot;: 1&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -6129,9 +6208,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/PromotionRule/UpdateStatus" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7 api/PromotionRule/UpdateStatus修改促销规则，根据条件" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6155,22 +6246,22 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Ptypeid&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,&#xd;
-  &quot;Rulename&quot;: &quot;string&quot;,&#xd;
-  &quot;Startdate&quot;: &quot;2019-03-19T03:14:04.471Z&quot;,&#xd;
-  &quot;Enddate&quot;: &quot;2019-03-19T03:14:04.471Z&quot;,&#xd;
-  &quot;Minvalue&quot;: 0,&#xd;
-  &quot;Maxvalue&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Isaudit&quot;: true,&#xd;
+  &quot;Id&quot;: &quot;B26DBC3D-E6FA-49AB-9DCB-7319D768C8FD&quot;,&#xd;
+  &quot;Ptypeid&quot;: &quot;F8E46D04-9642-4B2F-B0CC-2B4254C047F0&quot;,&#xd;
+  &quot;Rulename&quot;: &quot;8253&quot;,&#xd;
+  &quot;Startdate&quot;: &quot;2019-01-28&quot;,&#xd;
+  &quot;Enddate&quot;: &quot;2019-01-28&quot;,&#xd;
+  &quot;Minvalue&quot;: 18.000,&#xd;
+  &quot;Maxvalue&quot;: 18.000,&#xd;
+  &quot;Status&quot;: 2,&#xd;
+  &quot;Isaudit&quot;: 1,&#xd;
   &quot;Stepvalue&quot;: 0,&#xd;
   &quot;Cyclemonth&quot;: 0,&#xd;
-  &quot;Isgrads&quot;: true,&#xd;
-  &quot;Gradsrules&quot;: &quot;string&quot;,&#xd;
-  &quot;Ismultiple&quot;: true,&#xd;
-  &quot;Remark&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Isgrads&quot;: 0,&#xd;
+  &quot;Gradsrules&quot;: &quot;&quot;,&#xd;
+  &quot;Ismultiple&quot;: 1,&#xd;
+  &quot;Remark&quot;: &quot;&quot;,&#xd;
+  &quot;Linetype&quot;: 1&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -6227,9 +6318,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/PromotionRule/UpdateStatus" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/PromotionRule/UpdateStatus/{ptypeid}根据促销类型ID，查询新促销规则列表" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6248,22 +6351,14 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="ptypeid" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">ptypeid</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/PromotionRule/UpdateStatus</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <stringProp name="HTTPSampler.path">api/PromotionRule/UpdateStatus/F8E46D04-9642-4B2F-B0CC-2B4254C047F0</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -6309,9 +6404,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9 api/PromotionRule/Copy" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9 api/PromotionRule/Copy复制新促销规则到下个月" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6335,22 +6442,22 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Ptypeid&quot;: &quot;00000000-0000-0000-0000-000000000000&quot;,&#xd;
-  &quot;Rulename&quot;: &quot;string&quot;,&#xd;
-  &quot;Startdate&quot;: &quot;2019-03-19T03:14:04.491Z&quot;,&#xd;
-  &quot;Enddate&quot;: &quot;2019-03-19T03:14:04.491Z&quot;,&#xd;
-  &quot;Minvalue&quot;: 0,&#xd;
-  &quot;Maxvalue&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Isaudit&quot;: true,&#xd;
+  &quot;Id&quot;: &quot;B26DBC3D-E6FA-49AB-9DCB-7319D768C8FD&quot;,&#xd;
+  &quot;Ptypeid&quot;: &quot;F8E46D04-9642-4B2F-B0CC-2B4254C047F0&quot;,&#xd;
+  &quot;Rulename&quot;: &quot;aaaaa&quot;,&#xd;
+  &quot;Startdate&quot;: &quot;2019-02-28&quot;,&#xd;
+  &quot;Enddate&quot;: &quot;2019-03-28&quot;,&#xd;
+  &quot;Minvalue&quot;: 18.000,&#xd;
+  &quot;Maxvalue&quot;: 18.000,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Isaudit&quot;: 1,&#xd;
   &quot;Stepvalue&quot;: 0,&#xd;
   &quot;Cyclemonth&quot;: 0,&#xd;
-  &quot;Isgrads&quot;: true,&#xd;
-  &quot;Gradsrules&quot;: &quot;string&quot;,&#xd;
-  &quot;Ismultiple&quot;: true,&#xd;
-  &quot;Remark&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Isgrads&quot;: 0,&#xd;
+  &quot;Gradsrules&quot;: &quot;&quot;,&#xd;
+  &quot;Ismultiple&quot;: 1,&#xd;
+  &quot;Remark&quot;: &quot;&quot;,&#xd;
+  &quot;Linetype&quot;: 1&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -6407,9 +6514,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10api/PromotionRule/All" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10api/PromotionRule/All按事业线，获取校区列表" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6428,21 +6547,13 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="linetype" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">linetype</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/PromotionRule/All</stringProp>
+            <stringProp name="HTTPSampler.path">api/PromotionRule/All/2</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -6489,9 +6600,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11 api/PromotionRule/AllByLevel" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11 api/PromotionRule/AllByLevel按照事业线，获取校区列表和对应的等级" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6510,21 +6633,13 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="linetype" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">linetype</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/PromotionRule/AllByLevel</stringProp>
+            <stringProp name="HTTPSampler.path">api/PromotionRule/AllByLevel/2</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -6571,9 +6686,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="12 api/PromotionRule/InsertDetail" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="12 api/PromotionRule/InsertDetail添加促销规则明细" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6597,9 +6724,9 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Promotionid&quot;: &quot;string&quot;,&#xd;
-  &quot;Deptids&quot;: &quot;string&quot;,&#xd;
-  &quot;Contractids&quot;: &quot;string&quot;&#xd;
+  &quot;Promotionid&quot;: &quot;4CE54F9F-F45F-422E-ACB6-C72D01A6BE47&quot;,&#xd;
+  &quot;Deptids&quot;: &quot;4,12,13,17,18,23,28,30,81,174&quot;,&#xd;
+  &quot;Contractids&quot;: &quot;260,259,258,257,256,255,254,253,252,251,250,249,248,247,246,245,244,243,242,241,240,239,238,237,17,16,15,13,14,236,235,234,233,232,231,230,229,228,227,226,225,224,223,222,221,220,219,218,217,216,215,214,213,212,211,210,209,208,207,206,205,204,203,202,201,200,199,198,197,196,195,194,193,192,191,190,189,188,187,186,177,176,175,174,171,170,169,168,167,166,164,165,163,162,161,160,159,158,157,156,155,154,148,147,146,145,144,143,142,141,140,139,138,137,136,135,134,133,132,131,130,129,128,127,126,125,124,123,123,122,121,120,119,118,117,116,115,114,113,112,111,99,1,98,40,74,97,101,104,95,94,67,93,70,10,49,28,75,50,72,69,76,68,45,47,46,51,48&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -6656,9 +6783,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PromotionType/ListByPage" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/PromotionType/ListByPage新促销类型列表(分页)" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6682,11 +6821,11 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Linetype&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Pagesize&quot;: 0,&#xd;
-  &quot;Curpage&quot;: 0&#xd;
+  &quot;Linetype&quot;: 1,&#xd;
+  &quot;Type&quot;: 2,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Pagesize&quot;: 10,&#xd;
+  &quot;Curpage&quot;: 1&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -6743,9 +6882,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PromotionType/ListByID" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/PromotionType/ListByID新促销类型明细" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6769,14 +6920,16 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Discounttype&quot;: 0,&#xd;
-  &quot;Typename&quot;: &quot;string&quot;,&#xd;
+  &quot;Id&quot;: &quot;&quot;,&#xd;
+  &quot;Discounttype&quot;: 4,&#xd;
+  &quot;Typename&quot;: &quot;&quot;,&#xd;
   &quot;Maxlimittype&quot;: 0,&#xd;
   &quot;Status&quot;: 0,&#xd;
-  &quot;Remark&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
-}</stringProp>
+  &quot;Remark&quot;: &quot;&quot;,&#xd;
+  &quot;Linetype&quot;: 2&#xd;
+}&#xd;
+&#xd;
+</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -6794,6 +6947,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKGetPromotionTypeByID</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -6832,9 +6986,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PromotionType/Insert" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/PromotionType/Insert添加新促销类型" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6858,13 +7024,13 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Discounttype&quot;: 0,&#xd;
-  &quot;Typename&quot;: &quot;string&quot;,&#xd;
+  &quot;Id&quot;: &quot;&quot;,&#xd;
+  &quot;Discounttype&quot;: 4,&#xd;
+  &quot;Typename&quot;: &quot;${__Random(1000,9999,)}&quot;,&#xd;
   &quot;Maxlimittype&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Remark&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Remark&quot;: &quot;&quot;,&#xd;
+  &quot;Linetype&quot;: 2&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -6921,9 +7087,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PromotionType/Update" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/PromotionType/Update修改新促销类型" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6947,13 +7125,13 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Discounttype&quot;: 0,&#xd;
-  &quot;Typename&quot;: &quot;string&quot;,&#xd;
+  &quot;Id&quot;: &quot;AF3A1253-EA82-4443-BD72-9A2D3BC2B333&quot;,&#xd;
+  &quot;Discounttype&quot;: 4,&#xd;
+  &quot;Typename&quot;: &quot;${__Random(1000,9999,)}&quot;,&#xd;
   &quot;Maxlimittype&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Remark&quot;: &quot;string&quot;,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Remark&quot;: &quot;&quot;,&#xd;
+  &quot;Linetype&quot;: 2&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -7010,9 +7188,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/SaleRules/List" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="1 api/SaleRules/List获取优惠规则(分页)" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7036,11 +7226,10 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Linetype&quot;: 0,&#xd;
-  &quot;Type&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Pagesize&quot;: 0,&#xd;
-  &quot;Curpage&quot;: 0&#xd;
+  &quot;Linetype&quot;: 3,&#xd;
+  &quot;Status&quot;: 2,&#xd;
+  &quot;Pagesize&quot;: 10,&#xd;
+  &quot;Curpage&quot;: 1&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -7097,9 +7286,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/SaleRules/Copy" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="2 api/SaleRules/Copy复制优惠规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7123,11 +7324,11 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Dimension&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Id&quot;: &quot;B66BF431-8845-49A3-8581-99C74D529E77&quot;,&#xd;
+  &quot;Name&quot;: &quot;FY19新政-优惠规则（丽江）copy&quot;,&#xd;
+  &quot;Dimension&quot;: 1,&#xd;
+  &quot;Status&quot;: 2,&#xd;
+  &quot;Linetype&quot;: 3&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -7136,7 +7337,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
             <stringProp name="HTTPSampler.path">api/SaleRules/Copy</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -7184,9 +7385,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/SaleRules/Insert" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="3 api/SaleRules/Insert新增优惠规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7210,11 +7423,11 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Dimension&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Id&quot;: &quot;&quot;,&#xd;
+  &quot;Name&quot;: &quot;${__Random(1000,9999,)}&quot;,&#xd;
+  &quot;Dimension&quot;: 1,&#xd;
+  &quot;Status&quot;: 2,&#xd;
+  &quot;Linetype&quot;: 3&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -7271,9 +7484,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/SaleRules/InsertSaleRulesDetail" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="4 api/SaleRules/InsertSaleRulesDetail新增优惠规则详情" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7297,14 +7522,14 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Dimension&quot;: 0,&#xd;
-  &quot;Salerulesid&quot;: &quot;string&quot;,&#xd;
-  &quot;Startindex&quot;: 0,&#xd;
-  &quot;Endindex&quot;: 0,&#xd;
+  &quot;Dimension&quot;: 1,&#xd;
+  &quot;Salerulesid&quot;: &quot;31860C12-FD36-4AB2-BEFD-E903C29B2279&quot;,&#xd;
+  &quot;Startindex&quot;: 990,&#xd;
+  &quot;Endindex&quot;: 1034,&#xd;
   &quot;Appendstartindex&quot;: 0,&#xd;
   &quot;Appendendindex&quot;: 0,&#xd;
-  &quot;Saleprice&quot;: 0,&#xd;
-  &quot;Maxvalue&quot;: 0&#xd;
+  &quot;Saleprice&quot;: 23300.00,&#xd;
+  &quot;Maxvalue&quot;: 999999.00&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -7361,9 +7586,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/SaleRules/ListByStatus" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 api/SaleRules/ListByStatus通过状态获取优惠规则" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7382,21 +7619,13 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="linetype" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">linetype</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/SaleRules/ListByStatus</stringProp>
+            <stringProp name="HTTPSampler.path">api/SaleRules/ListByStatus/3</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -7443,9 +7672,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/SaleRules/Update" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="6 api/SaleRules/Update修改优惠规则详情" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7469,11 +7710,11 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Dimension&quot;: 0,&#xd;
-  &quot;Status&quot;: 0,&#xd;
-  &quot;Linetype&quot;: 0&#xd;
+  &quot;Id&quot;: &quot;31860C12-FD36-4AB2-BEFD-E903C29B2279&quot;,&#xd;
+  &quot;Name&quot;: &quot;${__Random(1000,9999,)}&quot;,&#xd;
+  &quot;Dimension&quot;: 1,&#xd;
+  &quot;Status&quot;: 1,&#xd;
+  &quot;Linetype&quot;: 2&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -7530,9 +7771,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7api/SaleRules/ListById" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7api/SaleRules/ListById通过ID获取优惠规则详情" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7551,103 +7804,13 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="id" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">id</stringProp>
-                </elementProp>
-              </collectionProp>
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/SaleRules/ListById</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-        </hashTree>
-      </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/SaleRules/ListBySetId" enabled="false">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
-        <longProp name="ThreadGroup.start_time">1552876922000</longProp>
-        <longProp name="ThreadGroup.end_time">1552876922000</longProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration"></stringProp>
-        <stringProp name="ThreadGroup.delay"></stringProp>
-      </ThreadGroup>
-      <hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="setid" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value"></stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">setid</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain"></stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/SaleRules/ListBySetId</stringProp>
+            <stringProp name="HTTPSampler.path">api/SaleRules/ListById/31860C12-FD36-4AB2-BEFD-E903C29B2279</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -7694,9 +7857,108 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9 api/SaleRules/InsertSetCopy" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 api/SaleRules/ListBySetId根据课程价格 设置查询优惠详情" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1552876922000</longProp>
+        <longProp name="ThreadGroup.end_time">1552876922000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">api/SaleRules/ListBySetId/F0C136C7-D955-44BE-85CC-E8ABB5A2AA63</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKGetSaleRulesBySetId</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9 api/SaleRules/InsertSetCopy复制(插入)课程价格规则子表T_JGKCoursePriceRulesSet" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7720,8 +7982,8 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Oldcoursepricerulesid&quot;: &quot;string&quot;,&#xd;
-  &quot;Newcoursepricerulesid&quot;: &quot;string&quot;&#xd;
+  &quot;Oldcoursepricerulesid&quot;: &quot;2B6F3E31-D423-42B9-906E-2D64EFDA4409&quot;,&#xd;
+  &quot;Newcoursepricerulesid&quot;: &quot;BBF54A94-2216-4B89-B7F3-BB29277BA58B&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -7740,6 +8002,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKInsertCoursePriceRulesSetCopy</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -7778,9 +8041,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10api/SaleRules/InsertBaseInfo" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10api/SaleRules/InsertBaseInfo复制(插入)课程价格规则主表" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7804,10 +8079,10 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Oldcoursepricerulesid&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
-  &quot;Startdate&quot;: &quot;string&quot;,&#xd;
-  &quot;Enddate&quot;: &quot;string&quot;&#xd;
+  &quot;Oldcoursepricerulesid&quot;: &quot;5245FF86-360C-4679-A5DE-0008A24F758E&quot;,&#xd;
+  &quot;Name&quot;: &quot;test1234&quot;,&#xd;
+  &quot;Startdate&quot;: &quot;2019-07-01&quot;,&#xd;
+  &quot;Enddate&quot;: &quot;2019-08-11&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -7816,7 +8091,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
             <stringProp name="HTTPSampler.path">api/SaleRules/InsertBaseInfo</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -7826,6 +8101,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKInsertCoursePriceRulesBaseInfo</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -7864,9 +8140,21 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11 api/SaleRules/InsertRulesRelationSetId" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11 ！！！api/SaleRules/InsertRulesRelationSetId复制(插入)课程价格规则关系表CoursePriceRulesSetId为空 复制(插入)课程价格规则关系表CoursePriceRulesSetId不为空" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -7912,6 +8200,7 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
             <stringProp name="HTTPSampler.connect_timeout"></stringProp>
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">P_JGKInsertCoursePriceRulesAllRelationCoursePriceRulesSetIdIsNotNull</stringProp>
           </HTTPSamplerProxy>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
@@ -7949,6 +8238,18 @@ SELECT TOP 10 * FROM	T_JGKFreeCourseDetail WHERE FreeCourseRulesID =&apos;B03BD1
             </objProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="181129529">Return_data</stringProp>
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>

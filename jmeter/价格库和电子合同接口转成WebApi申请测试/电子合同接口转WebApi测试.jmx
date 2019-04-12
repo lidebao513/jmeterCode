@@ -983,7 +983,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9！！！！DKPay代扣（缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9！！！！DKPay代扣（缺少参数无法进行测试）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1007,16 +1007,16 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Order_id&quot;: &quot;string&quot;,&#xd;
-  &quot;C_code&quot;: &quot;string&quot;,&#xd;
-  &quot;C_name&quot;: &quot;string&quot;,&#xd;
-  &quot;C_pid&quot;: &quot;string&quot;,&#xd;
-  &quot;C_bankcardno&quot;: &quot;string&quot;,&#xd;
-  &quot;C_phone&quot;: &quot;string&quot;,&#xd;
-  &quot;Amount&quot;: 0,&#xd;
-  &quot;Deptid&quot;: &quot;string&quot;,&#xd;
-  &quot;Remark&quot;: &quot;string&quot;,&#xd;
-  &quot;Htcode&quot;: &quot;string&quot;&#xd;
+  &quot;Order_id&quot;: &quot;2F67CC7D-17A7-4AA6-AF9D-05010318965E&quot;,&#xd;
+  &quot;C_code&quot;: &quot;3425557&quot;,&#xd;
+  &quot;C_name&quot;: &quot;BDF8F508C615B3F2&quot;,&#xd;
+  &quot;C_pid&quot;: &quot;7022CCE842B79E88CE3B0574BA0748FF473E3F399EE4A7F9&quot;,&#xd;
+  &quot;C_bankcardno&quot;: &quot;5FA40DF7D4238C2203FDF7B567A8013A20DBA63F75D6ED2F&quot;,&#xd;
+  &quot;C_phone&quot;: &quot;1F2C617D914A1CB0BDB0CDBA1D924BB5&quot;,&#xd;
+  &quot;Amount&quot;: 9999,&#xd;
+  &quot;Deptid&quot;: &quot;4&quot;,&#xd;
+  &quot;Remark&quot;: &quot;&quot;,&#xd;
+  &quot;Htcode&quot;: &quot;SH023425388&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -1530,7 +1530,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 ！！！！Info根据条件查询合同基本信息 （口不用测试，因为没有使用）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="5 ！！！！Info根据条件查询合同基本信息 （接口不用测试，因为没有使用）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1701,7 +1701,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7！！！！ Insert保存合同和明细（缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="7Insert保存合同和明细" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1716,6 +1716,15 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
@@ -1725,11 +1734,59 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Ht&quot;: &quot;string&quot;,&#xd;
-  &quot;Htdetailstr&quot;: &quot;string&quot;,&#xd;
-  &quot;Ordercode&quot;: &quot;string&quot;,&#xd;
-  &quot;Orderdetailid&quot;: &quot;string&quot;,&#xd;
-  &quot;Orderdetailcode&quot;: &quot;string&quot;&#xd;
+  &quot;Ht&quot;: {&#xd;
+	&quot;htid&quot;: 0,&#xd;
+	&quot;htype&quot;: 1,&#xd;
+	&quot;htypename&quot;: null,&#xd;
+	&quot;studentid&quot;: 1620313,&#xd;
+	&quot;name&quot;: &quot;李诗尧&quot;,&#xd;
+	&quot;htcode&quot;: &quot;SH43190001A49&quot;,&#xd;
+	&quot;otype&quot;: 1,&#xd;
+	&quot;odate&quot;: &quot;2019-04-12T00:00:00&quot;,&#xd;
+	&quot;grade&quot;: &quot;初一&quot;,&#xd;
+	&quot;num&quot;: null,&#xd;
+	&quot;htje&quot;: null,&#xd;
+	&quot;yifu&quot;: null,&#xd;
+	&quot;statusname&quot;: null,&#xd;
+	&quot;status&quot;: -1,&#xd;
+	&quot;type&quot;: &quot;1&quot;,&#xd;
+	&quot;salesid&quot;: 19123,&#xd;
+	&quot;bzr&quot;: 1,&#xd;
+	&quot;address&quot;: null,&#xd;
+	&quot;mobile&quot;: null,&#xd;
+	&quot;email&quot;: null,&#xd;
+	&quot;TotalRecordCount&quot;: null,&#xd;
+	&quot;deptid&quot;: 142,&#xd;
+	&quot;bdate&quot;: &quot;2019-04-12T00:00:00&quot;,&#xd;
+	&quot;Iftj&quot;: false,&#xd;
+	&quot;TjPerson&quot;: &quot;&quot;,&#xd;
+	&quot;Relax&quot;: &quot;李健麟&quot;,&#xd;
+	&quot;Sales&quot;: &quot;张东&quot;,&#xd;
+	&quot;Operator&quot;: &quot;李健麟&quot;,&#xd;
+	&quot;remark1&quot;: &quot;&quot;,&#xd;
+	&quot;otypename&quot;: null,&#xd;
+	&quot;AAAAA&quot;: null,&#xd;
+	&quot;cj&quot;: &quot;&quot;,&#xd;
+	&quot;gx&quot;: &quot;学生姓名&quot;,&#xd;
+	&quot;ah&quot;: &quot;李诗尧&quot;,&#xd;
+	&quot;jt&quot;: &quot;0&quot;,&#xd;
+	&quot;xx&quot;: &quot;&quot;,&#xd;
+	&quot;jl&quot;: &quot;0&quot;,&#xd;
+	&quot;qw&quot;: &quot;&quot;,&#xd;
+	&quot;jc&quot;: &quot;2&quot;,&#xd;
+	&quot;ff&quot;: &quot;&quot;,&#xd;
+	&quot;IsAgSign&quot;: null,&#xd;
+	&quot;IsAgPrint&quot;: null,&#xd;
+	&quot;xg&quot;: &quot;&quot;,&#xd;
+	&quot;nl&quot;: &quot;1&quot;,&#xd;
+	&quot;xl&quot;: &quot;0&quot;,&#xd;
+	&quot;AgreementCode&quot;: null,&#xd;
+	&quot;StudentNumber&quot;: null&#xd;
+},&#xd;
+  &quot;Htdetailstr&quot;: &quot;^初一,数学,280,15,,2019/4/12 15:56:31,False,0,True,初一,1,0,,15,,280^初一,英语,280,15,,2019/4/12 15:56:31,False,0,True,初一,1,0,,15,,280^初一,语文,280,15,,2019/4/12 15:56:31,False,0,True,初一,1,0,,15,,280&quot;,&#xd;
+  &quot;Ordercode&quot;: &quot;&quot;,&#xd;
+  &quot;Orderdetailid&quot;: &quot;0&quot;,&#xd;
+  &quot;Orderdetailcode&quot;: &quot;&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -1738,7 +1795,7 @@
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
             <stringProp name="HTTPSampler.path">api/Contract/Insert</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -1786,9 +1843,19 @@
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="1477632">0000</stringProp>
+              <stringProp name="1094873850">请求成功</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 ！！！！InsertZSInfo保存赠送合同明细（缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="8 ！！！！InsertZSInfo保存赠送合同明细（缺少参数无法进行测试）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1812,7 +1879,55 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Ht&quot;: &quot;string&quot;,&#xd;
+  &quot;Ht&quot;: {&#xd;
+    &quot;htid&quot;: 0,&#xd;
+    &quot;htype&quot;: 0,&#xd;
+    &quot;htypename&quot;: &quot;string&quot;,&#xd;
+    &quot;studentid&quot;: 0,&#xd;
+    &quot;name&quot;: &quot;string&quot;,&#xd;
+    &quot;htcode&quot;: &quot;string&quot;,&#xd;
+    &quot;otype&quot;: 0,&#xd;
+    &quot;odate&quot;: &quot;2019-04-12T08:54:07.671Z&quot;,&#xd;
+    &quot;grade&quot;: &quot;string&quot;,&#xd;
+    &quot;num&quot;: 0,&#xd;
+    &quot;htje&quot;: 0,&#xd;
+    &quot;yifu&quot;: 0,&#xd;
+    &quot;statusname&quot;: &quot;string&quot;,&#xd;
+    &quot;status&quot;: 0,&#xd;
+    &quot;type&quot;: &quot;string&quot;,&#xd;
+    &quot;salesid&quot;: 0,&#xd;
+    &quot;bzr&quot;: 0,&#xd;
+    &quot;address&quot;: &quot;string&quot;,&#xd;
+    &quot;mobile&quot;: &quot;string&quot;,&#xd;
+    &quot;email&quot;: &quot;string&quot;,&#xd;
+    &quot;TotalRecordCount&quot;: 0,&#xd;
+    &quot;deptid&quot;: 0,&#xd;
+    &quot;bdate&quot;: &quot;2019-04-12T08:54:07.671Z&quot;,&#xd;
+    &quot;Iftj&quot;: true,&#xd;
+    &quot;TjPerson&quot;: &quot;string&quot;,&#xd;
+    &quot;Relax&quot;: &quot;string&quot;,&#xd;
+    &quot;Sales&quot;: &quot;string&quot;,&#xd;
+    &quot;Operator&quot;: &quot;string&quot;,&#xd;
+    &quot;remark1&quot;: &quot;string&quot;,&#xd;
+    &quot;otypename&quot;: &quot;string&quot;,&#xd;
+    &quot;AAAAA&quot;: &quot;string&quot;,&#xd;
+    &quot;cj&quot;: &quot;string&quot;,&#xd;
+    &quot;gx&quot;: &quot;string&quot;,&#xd;
+    &quot;ah&quot;: &quot;string&quot;,&#xd;
+    &quot;jt&quot;: &quot;string&quot;,&#xd;
+    &quot;xx&quot;: &quot;string&quot;,&#xd;
+    &quot;jl&quot;: &quot;string&quot;,&#xd;
+    &quot;qw&quot;: &quot;string&quot;,&#xd;
+    &quot;jc&quot;: &quot;string&quot;,&#xd;
+    &quot;ff&quot;: &quot;string&quot;,&#xd;
+    &quot;IsAgSign&quot;: &quot;string&quot;,&#xd;
+    &quot;IsAgPrint&quot;: &quot;string&quot;,&#xd;
+    &quot;xg&quot;: &quot;string&quot;,&#xd;
+    &quot;nl&quot;: &quot;string&quot;,&#xd;
+    &quot;xl&quot;: &quot;string&quot;,&#xd;
+    &quot;AgreementCode&quot;: &quot;string&quot;,&#xd;
+    &quot;StudentNumber&quot;: &quot;string&quot;&#xd;
+  },&#xd;
   &quot;HtZsdetailstr&quot;: &quot;string&quot;,&#xd;
   &quot;Discount&quot;: 0,&#xd;
   &quot;Isaudit&quot;: &quot;string&quot;&#xd;
@@ -1874,7 +1989,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9！！！！ InsertOnev3ZSInfo保存一对三赠送合同明细（缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="9！！！！ InsertOnev3ZSInfo保存一对三赠送合同明细（缺少参数无法进行测试）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -1898,7 +2013,55 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Ht&quot;: &quot;string&quot;,&#xd;
+  &quot;Ht&quot;: {&#xd;
+    &quot;htid&quot;: 0,&#xd;
+    &quot;htype&quot;: 0,&#xd;
+    &quot;htypename&quot;: &quot;string&quot;,&#xd;
+    &quot;studentid&quot;: 0,&#xd;
+    &quot;name&quot;: &quot;string&quot;,&#xd;
+    &quot;htcode&quot;: &quot;string&quot;,&#xd;
+    &quot;otype&quot;: 0,&#xd;
+    &quot;odate&quot;: &quot;2019-04-12T08:54:07.685Z&quot;,&#xd;
+    &quot;grade&quot;: &quot;string&quot;,&#xd;
+    &quot;num&quot;: 0,&#xd;
+    &quot;htje&quot;: 0,&#xd;
+    &quot;yifu&quot;: 0,&#xd;
+    &quot;statusname&quot;: &quot;string&quot;,&#xd;
+    &quot;status&quot;: 0,&#xd;
+    &quot;type&quot;: &quot;string&quot;,&#xd;
+    &quot;salesid&quot;: 0,&#xd;
+    &quot;bzr&quot;: 0,&#xd;
+    &quot;address&quot;: &quot;string&quot;,&#xd;
+    &quot;mobile&quot;: &quot;string&quot;,&#xd;
+    &quot;email&quot;: &quot;string&quot;,&#xd;
+    &quot;TotalRecordCount&quot;: 0,&#xd;
+    &quot;deptid&quot;: 0,&#xd;
+    &quot;bdate&quot;: &quot;2019-04-12T08:54:07.685Z&quot;,&#xd;
+    &quot;Iftj&quot;: true,&#xd;
+    &quot;TjPerson&quot;: &quot;string&quot;,&#xd;
+    &quot;Relax&quot;: &quot;string&quot;,&#xd;
+    &quot;Sales&quot;: &quot;string&quot;,&#xd;
+    &quot;Operator&quot;: &quot;string&quot;,&#xd;
+    &quot;remark1&quot;: &quot;string&quot;,&#xd;
+    &quot;otypename&quot;: &quot;string&quot;,&#xd;
+    &quot;AAAAA&quot;: &quot;string&quot;,&#xd;
+    &quot;cj&quot;: &quot;string&quot;,&#xd;
+    &quot;gx&quot;: &quot;string&quot;,&#xd;
+    &quot;ah&quot;: &quot;string&quot;,&#xd;
+    &quot;jt&quot;: &quot;string&quot;,&#xd;
+    &quot;xx&quot;: &quot;string&quot;,&#xd;
+    &quot;jl&quot;: &quot;string&quot;,&#xd;
+    &quot;qw&quot;: &quot;string&quot;,&#xd;
+    &quot;jc&quot;: &quot;string&quot;,&#xd;
+    &quot;ff&quot;: &quot;string&quot;,&#xd;
+    &quot;IsAgSign&quot;: &quot;string&quot;,&#xd;
+    &quot;IsAgPrint&quot;: &quot;string&quot;,&#xd;
+    &quot;xg&quot;: &quot;string&quot;,&#xd;
+    &quot;nl&quot;: &quot;string&quot;,&#xd;
+    &quot;xl&quot;: &quot;string&quot;,&#xd;
+    &quot;AgreementCode&quot;: &quot;string&quot;,&#xd;
+    &quot;StudentNumber&quot;: &quot;string&quot;&#xd;
+  },&#xd;
   &quot;HtZsdetailstr&quot;: &quot;string&quot;,&#xd;
   &quot;Discount&quot;: 0,&#xd;
   &quot;Isaudit&quot;: &quot;string&quot;&#xd;
@@ -1960,7 +2123,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10 ！！！!Get_Contract学员合同列表（缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10 ！！！!Get_Contract学员合同列表（缺少参数无法进行测试）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4320,7 +4483,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="24！！！！ InsertContractDK （缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="24！！！！ InsertContractDK （缺少参数无法进行测试）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4449,7 +4612,7 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Htid&quot;: 521754,&#xd;
+  &quot;Htid&quot;: ${__Random(2521752,9521752,)},&#xd;
   &quot;Htype&quot;: 1,&#xd;
   &quot;Htpdf&quot;: &quot;pdf/52178611554115630.pdf&quot;,&#xd;
   &quot;Signimg&quot;: &quot;sign/52178611554115628.png&quot;&#xd;
@@ -4726,7 +4889,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="28！！ Insert_ContractLicense 添加激活码" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="28lnsert_ContractLicense 添加激活码" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -4753,27 +4916,14 @@
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="简单控制器" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
-            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">{&#xd;
-  &quot;Licenseid&quot;: &quot;05F64130-B2C0-4442-8A2C-28B1D8669802&quot;,&#xd;
-  &quot;Schoolid&quot;: 5,&#xd;
-  &quot;Status&quot;: 1,&#xd;
-  &quot;Expire&quot;: 0,&#xd;
-  &quot;Macaddress&quot;: &quot;A0:D5:5E:99:B9:07&quot;&#xd;
-}</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                </elementProp>
-              </collectionProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
             </elementProp>
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">api/Contract/Insert_ContractLicense</stringProp>
+            <stringProp name="HTTPSampler.path">api/Contract/Insert_ContractLicense?SchoolID=5</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -4833,7 +4983,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="29 ！！Update_ContractLicense更新激活码" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="29Update_ContractLicense更新激活码" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6408,7 +6558,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="44 ！！！！DELZanCunContract根据合同id删除暂存合同（缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="44 ！！！！DELZanCunContract根据合同id删除暂存合同（缺少参数无法进行测试）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6432,9 +6582,9 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Htid&quot;: &quot;string&quot;,&#xd;
-  &quot;Htype&quot;: &quot;string&quot;,&#xd;
-  &quot;Adminid&quot;: &quot;string&quot;&#xd;
+ &quot;Htid&quot;: &quot;521844&quot;,&#xd;
+  &quot;Htype&quot;: &quot;1&quot;,&#xd;
+  &quot;Adminid&quot;: &quot;68117&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -6784,7 +6934,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="47 ！！！！HaveContract合同是否存在（  缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="47 HaveContract合同是否存在" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -6808,10 +6958,10 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Studentid&quot;: 0,&#xd;
-  &quot;Htid&quot;: 0,&#xd;
-  &quot;Htype&quot;: &quot;1&quot;,&#xd;
-  &quot;Type&quot;: 0,&#xd;
+  &quot;Studentid&quot;: 6593835,&#xd;
+  &quot;Htid&quot;: 437867,&#xd;
+  &quot;Htype&quot;: &quot;&quot;,&#xd;
+  &quot;Type&quot;: 10,&#xd;
   &quot;Status&quot;: 0&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
@@ -8205,7 +8355,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10！！！！OperateStudentLeads注册/修改学员信息，同时增加/修改学员的微信信息（  缺少参数无法进行测试）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="10！！！！OperateStudentLeads注册/修改学员信息，同时增加/修改学员的微信信息（  缺少参数无法进行测试）" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -8262,28 +8412,28 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Id&quot;: 0,&#xd;
+  &quot;Id&quot;: 1693,&#xd;
   &quot;Status&quot;: 0,&#xd;
-  &quot;Intype&quot;: &quot;string&quot;,&#xd;
-  &quot;Name&quot;: &quot;string&quot;,&#xd;
+  &quot;Intype&quot;: &quot;主动上门&quot;,&#xd;
+  &quot;Name&quot;: &quot;陶贵珠&quot;,&#xd;
   &quot;Sex&quot;: 0,&#xd;
-  &quot;Jzusername&quot;: &quot;string&quot;,&#xd;
-  &quot;Jiazhang&quot;: &quot;string&quot;,&#xd;
-  &quot;School&quot;: &quot;string&quot;,&#xd;
-  &quot;Dept&quot;: 0,&#xd;
-  &quot;Deptname&quot;: &quot;string&quot;,&#xd;
-  &quot;Grade&quot;: 0,&#xd;
-  &quot;Gradename&quot;: &quot;string&quot;,&#xd;
-  &quot;Linkphone&quot;: &quot;string&quot;,&#xd;
-  &quot;Email&quot;: &quot;string&quot;,&#xd;
-  &quot;Weixin&quot;: &quot;string&quot;,&#xd;
-  &quot;Tjcode&quot;: &quot;string&quot;,&#xd;
-  &quot;Answers&quot;: &quot;string&quot;,&#xd;
-  &quot;Big_class&quot;: &quot;string&quot;,&#xd;
-  &quot;Small_class&quot;: &quot;string&quot;,&#xd;
+  &quot;Jzusername&quot;: &quot;aaa&quot;,&#xd;
+  &quot;Jiazhang&quot;: &quot;bbb&quot;,&#xd;
+  &quot;School&quot;: &quot;ccc&quot;,&#xd;
+  &quot;Dept&quot;: 3,&#xd;
+  &quot;Deptname&quot;: &quot;上海徐汇大木桥中心&quot;,&#xd;
+  &quot;Grade&quot;: 4,&#xd;
+  &quot;Gradename&quot;: &quot;高四&quot;,&#xd;
+  &quot;Linkphone&quot;: &quot;13916080805&quot;,&#xd;
+  &quot;Email&quot;: &quot;aaa@163.com&quot;,&#xd;
+  &quot;Weixin&quot;: &quot;13916080806&quot;,&#xd;
+  &quot;Tjcode&quot;: &quot;&quot;,&#xd;
+  &quot;Answers&quot;: &quot;1|2|2|10|1|2,4,5|1|上外浦东附中，挺高。住宿制学校|比较努力，记忆里比较好|粗心|4|7|&quot;,&#xd;
+  &quot;Big_class&quot;: &quot;&quot;,&#xd;
+  &quot;Small_class&quot;: &quot;&quot;,&#xd;
   &quot;Rid&quot;: 0,&#xd;
-  &quot;Sales&quot;: 0,&#xd;
-  &quot;Salesname&quot;: &quot;string&quot;&#xd;
+  &quot;Sales&quot;: 10427,&#xd;
+  &quot;Salesname&quot;: &quot;HZ11SD(虚拟)&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -8292,7 +8442,7 @@
             <stringProp name="HTTPSampler.domain"></stringProp>
             <stringProp name="HTTPSampler.port"></stringProp>
             <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
             <stringProp name="HTTPSampler.path">api/DataInfo/OperateStudentLeads</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -8352,7 +8502,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11 ！！HtbyStudentidDndFeeDate根据日期和合同类别获取是否存在合同（无返回数据已提交bug）" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="11 HtbyStudentidDndFeeDate根据日期和合同类别获取是否存在合同（无返回数据已提交bug）" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -8385,10 +8535,10 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Studentid&quot;: &quot;string&quot;,&#xd;
-  &quot;Htype&quot;: &quot;string&quot;,&#xd;
-  &quot;Startdate&quot;: &quot;2019-03-18T03:46:43.824Z&quot;,&#xd;
-  &quot;Enddate&quot;: &quot;2019-03-18T03:46:43.824Z&quot;&#xd;
+  &quot;Studentid&quot;: &quot;3425019&quot;,&#xd;
+  &quot;Htype&quot;: &quot;1&quot;,&#xd;
+  &quot;Startdate&quot;: &quot;2018-01-24 17:13:51.933&quot;,&#xd;
+  &quot;Enddate&quot;: &quot;2018-09-24 17:13:51.933&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -8465,10 +8615,10 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-  &quot;Studentid&quot;: &quot;string&quot;,&#xd;
-  &quot;Htype&quot;: &quot;string&quot;,&#xd;
-  &quot;Startdate&quot;: &quot;2019-03-18T03:46:43.824Z&quot;,&#xd;
-  &quot;Enddate&quot;: &quot;2019-03-18T03:46:43.824Z&quot;&#xd;
+  &quot;Studentid&quot;: &quot;11654206&quot;,&#xd;
+  &quot;Htype&quot;: &quot;2&quot;,&#xd;
+  &quot;Startdate&quot;: &quot;2018-01-24 17:13:51.933&quot;,&#xd;
+  &quot;Enddate&quot;: &quot;2018-04-24 17:13:51.933&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
